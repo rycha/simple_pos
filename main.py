@@ -25,9 +25,7 @@ def analyze_syntax(text):
     doc = nlp(text)
 
     # Analyze syntax
-    print("Noun phrases:", [chunk.text for chunk in doc.noun_chunks])
-    print("Verbs:", [token.lemma_ for token in doc if token.pos_ == "VERB"])
-    df = pd.DataFrame([{'text': e.text, 'label': e.label_} for e in doc.ents])
+    df = pd.DataFrame([{'text': t.text, 'lemma': t.lemma_, 'pos': t.pos_, 'dep': t.dep_} for t in doc])
     return df
 
 
