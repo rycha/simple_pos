@@ -1,0 +1,7 @@
+text,label
+Sebastian Thrun,PERSON
+2007,DATE
+American,NORP
+Thrun,PERSON
+Recode,PERSON
+earlier this week,DATE
