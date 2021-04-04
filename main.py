@@ -35,7 +35,7 @@ def main():
     args = parse_args()
     print(args)
     print('\n')
-    with open(args.input_file) as f:
+    with open(args.input_file, encoding="utf8") as f:
         text = ' '.join([line.strip() for line in f.readlines()])
         print(text[:args.print_length], '...')
         print('\n')
